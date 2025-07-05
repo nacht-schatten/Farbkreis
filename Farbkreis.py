@@ -7,7 +7,7 @@ from collections import Counter
 st.set_page_config(
     page_title="Farbkreisrätsel 🎨",
     page_icon="🎨",
-    layout="wide",
+    layout="centered",
     initial_sidebar_state="expanded"
 )
 
