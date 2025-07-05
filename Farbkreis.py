@@ -37,7 +37,7 @@ if not st.session_state.get("farben_bestätigt"):
     if "ausgewählte_farben" not in st.session_state:
         st.session_state.ausgewählte_farben = []
 
-    st.markdown("**🎨 Wähle drei Farben aus:**")
+    st.subheader("**🎨 Wähle drei Farben aus:**")
     spalten = st.columns(len(verfügbare_farben))
 
     # 🟡 Interaktive Buttons: ergänzen oder entfernen
