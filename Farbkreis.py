@@ -140,7 +140,7 @@ if st.session_state.get("farben_bestätigt"):
     # Zeige Farb-Buttons, Navigation, etc.
 
     farben = st.session_state.benutzer_farben
-    spalten = st.columns(len(farben) + 3)
+    spalten = st.columns(len(farben))
     
     # 1–3: Farb-Buttons aus benutzerdefinierter Auswahl
     for i, (emoji, hexcode) in enumerate(farben.items()):
@@ -150,17 +150,17 @@ if st.session_state.get("farben_bestätigt"):
             st.rerun()
     
     # 4: Überspringen
-    if spalten[-3].button("⏭️"):
+    if spalten[0].button("⏭️"):
         st.session_state.aktueller_idx = (aktueller_idx + 1) % anzahl_kreise
         st.rerun()
     
     # 5: Zurück
-    if spalten[-2].button("↩️"):
+    if spalten[1].button("↩️"):
         st.session_state.aktueller_idx = (aktueller_idx - 1) % anzahl_kreise
         st.rerun()
 
     # 6: Löschen & zurück
-    if spalten[-1].button("❌"):
+    if spalten[2].button("❌"):
         st.session_state.kreis_farben[aktueller_idx] = "white"
         st.session_state.aktueller_idx = (aktueller_idx - 1) % anzahl_kreise
         st.rerun()
