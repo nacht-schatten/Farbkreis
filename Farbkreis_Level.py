@@ -61,7 +61,7 @@ if not st.session_state.get("level_bestätigt"):
 
  
 else:
-    st.markdown(f"📘 Gewähltes Level: **{st.session_state.level_name}**")
+    st.markdown(f"🏆 Gewähltes Level: **{st.session_state.level_name}**")
 
 anzahl_farben = st.session_state.get("anzahl_farben")
 tupel_länge = st.session_state.get("tupel_länge")
