@@ -23,13 +23,13 @@ if not st.session_state.get("level_bestätigt"):
     st.markdown("### 🧩 Wähle dein Level:")
 
     level_optionen = {
-        "🔰 Einfach (2 Farben, 3er-Tupel)": (2, 3),
+        "🪄 Einfach (2 Farben, 3er-Tupel)": (2, 3),
         "💘 Farbpärchen (3 Farben, 2er-Tupel)": (3, 2),
         "🔍 Detektiv (4 Farben, 2er-Tupel)": (4, 2),
         "🌈 Pride (5 Farben, 2er-Tupel)": (5, 2),
         "🎨 Klassik (3 Farben, 3er-Tupel)": (3, 3),
         "🧠 Genie (2 Farben, 5er-Tupel)": (2, 5),
-        "🧪 Boss (2 Farben, 6er-Tupel)": (2, 6),
+        "🗿 Boss (2 Farben, 6er-Tupel)": (2, 6),
         "👑 Endgame (4 Farben, 3er-Tupel)": (4, 3),
     }
 
