@@ -34,10 +34,11 @@ if not st.session_state.get("level_bestätigt"):
     }
 
     ausgewähltes_level = st.selectbox(
-         label=None,
-        options=list(level_optionen.keys()),
+        "Level wählen:",
+        list(level_optionen.keys()),
         index=4
     )
+    
 
 
     anzahl_farben, tupel_länge = level_optionen[ausgewähltes_level]
