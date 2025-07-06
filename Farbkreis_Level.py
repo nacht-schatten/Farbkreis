@@ -292,8 +292,17 @@ if alle_bemalt:
             st.session_state.rätsel_gelöst = True 
             st.balloons()
             if st.button ("🔁 Nochmal spielen"):
-                st.session_state.clear()
-                st.rerun()
+                # Spielstand löschen
+                st.session_state.pop("farben_bestätigt", None)
+                st.session_state.pop("rätsel_gelöst", None)
+                st.session_state.pop("kreis_farben", None)
+                st.session_state.pop("aktueller_idx", None)
+                st.session_state.pop("ausgewählte_farben", None)
+                st.session_state.pop("benutzer_farben", None)
+                st.session_state.pop("letzte_farbauswahl", None)
+                st.session_state.pop("level_gestartet", None)
+                st.session_state.pop("level_bestätigt", None)
+
         
         if not gültig:
             fehlermeldung = "⚠️ Folgende Kombinationen treten mehrfach auf:\n\n" + tripel_zu_emojis(fehler)
