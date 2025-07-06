@@ -20,7 +20,7 @@ st.title("🎨 Farbkreis-Rätsel")
 
 
 if not st.session_state.get("level_bestätigt"):
-    st.markdown("### 🧩 Wähle dein Level:")
+    st.markdown("### 🧩 Wähle deine Mission:")
 
     level_optionen = {
         "🪄 Einfach (2 Farben, 3er-Tupel)": (2, 3),
@@ -34,7 +34,7 @@ if not st.session_state.get("level_bestätigt"):
     }
 
     ausgewähltes_level = st.selectbox(
-        "Level wählen",
+        "Mission wählen",
         list(level_optionen.keys()),
         index=4
     )
@@ -63,13 +63,13 @@ if not st.session_state.get("level_bestätigt"):
 
  
 else:
-    st.markdown(f"🏆 Gewähltes Level: **{st.session_state.level_name}**")
+    st.markdown(f"🏆 Gewählte Mission: **{st.session_state.level_name}**")
 
 anzahl_farben = st.session_state.get("anzahl_farben")
 tupel_länge = st.session_state.get("tupel_länge")
 anzahl_kreise = st.session_state.get("anzahl_kreise")
 
-st.info("##### 🔥 Deine Mission:\n\n" + f"\nBemale den Ring aus **{anzahl_kreise} Feldern** mit **{anzahl_farben} Farben** so, dass jede mögliche **{tupel_länge}-er**-Gruppe benachbarter Felder im Uhrzeigersinn eine einzigartige Farbfolge hat.")
+st.info("##### 🔥 Deine Mission:\n\n" + f"\nBemale den Ring aus **{anzahl_kreise} Feldern** mit **{anzahl_farben} Farben** so, dass jede mögliche **{tupel_länge}-er-Gruppe benachbarter Felder** im Uhrzeigersinn eine einzigartige Farbfolge hat.")
 
 
 if "kreis_farben" not in st.session_state or len(st.session_state.kreis_farben) != anzahl_kreise:
