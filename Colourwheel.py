@@ -69,7 +69,7 @@ anzahl_farben = st.session_state.get("anzahl_farben")
 tupel_länge = st.session_state.get("tupel_länge")
 anzahl_kreise = st.session_state.get("anzahl_kreise")
 
-st.info("##### 🔥 Your Mission:\n\n" + f"\n Organise **{anzahl_farben} colours** in this ring of **{anzahl_kreise} circles** in such a way that each **Set Of {tupel_länge}** has a unique colour combination. (Think clockwise!)")
+st.info("##### 🔥 Your Mission:\n\n" + f"\n Organise **{anzahl_farben} colours** in this ring of **{anzahl_kreise} circles** in such a way that each **Set of {tupel_länge}** has a unique colour combination. (Think clockwise!)")
 
 
 if "kreis_farben" not in st.session_state or len(st.session_state.kreis_farben) != anzahl_kreise:
@@ -146,7 +146,7 @@ if st.session_state.get("level_gestartet"):
         st.markdown("🎨 Selected Colours: **" + " ".join(st.session_state.ausgewählte_farben) + "**")
 
 else:
-    st.info("Pick & launch your mission in order to select your favourite colours!")
+    st.info("**Pick & Launch Your Mission** in order to select your favourite colours!")
 
 
 
@@ -229,7 +229,7 @@ elif len(st.session_state.get("ausgewählte_farben", [])) == anzahl_farben:
 # 🏷️ Fortschrittsanzeige
 bemalt = [f for f in st.session_state.kreis_farben if f != "white"]
 fortschritt = len(bemalt) / len(st.session_state.kreis_farben)
-st.caption(f"Fortschritt: {int(fortschritt * 100)} %")
+st.caption(f"Progress: {int(fortschritt * 100)} %")
 st.progress(fortschritt)
     
     
@@ -294,14 +294,14 @@ if alle_bemalt:
         if gültig:
             dauer = int(time.time() - st.session_state.startzeit)
             m, s = divmod(dauer, 60)
-            st.success(f"🎉 All **Sets Of {tupel_länge}** are unique! Puzzle solved in {m:02d}:{s:02d} minutes! 🎯")
+            st.success(f"🎉 All **Sets of {tupel_länge}** are unique! Puzzle solved in {m:02d}:{s:02d} minutes! 🎯")
             st.session_state.rätsel_gelöst = True 
             st.balloons()
            
 
         
         if not gültig:
-            fehlermeldung = f"⚠️ The following **Sets Of {tupel_länge}** are not unique: \n\n" + tripel_zu_emojis(fehler)
+            fehlermeldung = f"⚠️ The following **Sets of {tupel_länge}** are not unique: \n\n" + tripel_zu_emojis(fehler)
             st.error(fehlermeldung)
 
 else:
