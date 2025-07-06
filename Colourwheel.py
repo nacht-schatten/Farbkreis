@@ -69,7 +69,7 @@ anzahl_farben = st.session_state.get("anzahl_farben")
 tupel_länge = st.session_state.get("tupel_länge")
 anzahl_kreise = st.session_state.get("anzahl_kreise")
 
-st.info("##### 🔥 Your Mission:\n\n" + f"\n Organise **{anzahl_farben} colours** in this ring of **{anzahl_kreise} circles** in such a way that each **set of {tupel_länge}** has a unique colour combination. (Think clockwise!)")
+st.info("##### 🔥 Your Mission:\n\n" + f"\n Organise **{anzahl_farben} colours** in this ring of **{anzahl_kreise} circles** in such a way that each **Set Of {tupel_länge}** has a unique colour combination. (Think clockwise!)")
 
 
 if "kreis_farben" not in st.session_state or len(st.session_state.kreis_farben) != anzahl_kreise:
@@ -294,14 +294,14 @@ if alle_bemalt:
         if gültig:
             dauer = int(time.time() - st.session_state.startzeit)
             m, s = divmod(dauer, 60)
-            st.success(f"🎉 All sets of {tupel_länge} are unique! Puzzle solved in {m:02d}:{s:02d} minutes! 🎯")
+            st.success(f"🎉 All **Sets Of {tupel_länge}** are unique! Puzzle solved in {m:02d}:{s:02d} minutes! 🎯")
             st.session_state.rätsel_gelöst = True 
             st.balloons()
            
 
         
         if not gültig:
-            fehlermeldung = f"⚠️ The following sets of {tupel_länge} are not unique: \n\n" + tripel_zu_emojis(fehler)
+            fehlermeldung = f"⚠️ The following **Sets Of {tupel_länge}** are not unique: \n\n" + tripel_zu_emojis(fehler)
             st.error(fehlermeldung)
 
 else:
