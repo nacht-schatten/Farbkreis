@@ -231,7 +231,7 @@ st.progress(fortschritt)
     
     
 # 🧼 Zurücksetzen & Zufällig befüllen
-spalten = st.columns(3)
+spalten = st.columns(2)
 if st.session_state.get("farben_bestätigt") and not st.session_state.get("rätsel_gelöst"):
     if spalten[0].button("🧽 Kunstwerk zurücksetzen"):
         st.session_state.kreis_farben = ["white"] * anzahl_kreise
@@ -243,9 +243,7 @@ if st.session_state.get("farben_bestätigt") and not st.session_state.get("räts
         st.session_state.kreis_farben = [np.random.choice(list(farben.values())) for _ in range(anzahl_kreise)]
         st.rerun()
    
-    if spalten[2].button("🔁 Alles zurücksetzen"):
-        st.session_state.clear()
-        st.rerun()
+    
 
 
 
@@ -293,7 +291,9 @@ if alle_bemalt:
             st.success(f"🎉 Alle 3er-Farbkombinationen sind eindeutig! Rätsel gelöst in {m:02d}:{s:02d} Minuten! 🎯")
             st.session_state.rätsel_gelöst = True 
             st.balloons()
-    
+            if button ("🔁 Nochmal spielen"):
+                st.session_state.clear()
+                st.rerun()
         
         if not gültig:
             fehlermeldung = "⚠️ Folgende Kombinationen treten mehrfach auf:\n\n" + tripel_zu_emojis(fehler)
