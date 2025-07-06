@@ -47,7 +47,7 @@ if not st.session_state.get("level_bestätigt"):
     st.session_state.anzahl_farben, st.session_state.tupel_länge = level_optionen[ausgewähltes_level]
     st.session_state.anzahl_kreise = st.session_state.anzahl_farben ** st.session_state.tupel_länge
 
-    if st.button("🚀 Level starten"):
+    if st.button("🚀 Mission starten"):
         st.session_state.level_gestartet = True
         st.session_state.level_bestätigt = True  # 👈 Neu!
         st.session_state.kreis_farben = ["white"] * anzahl_kreise
