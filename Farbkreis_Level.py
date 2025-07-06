@@ -291,7 +291,7 @@ if alle_bemalt:
             st.success(f"🎉 Alle 3er-Farbkombinationen sind eindeutig! Rätsel gelöst in {m:02d}:{s:02d} Minuten! 🎯")
             st.session_state.rätsel_gelöst = True 
             st.balloons()
-            if button ("🔁 Nochmal spielen"):
+            if st.button ("🔁 Nochmal spielen"):
                 st.session_state.clear()
                 st.rerun()
         
