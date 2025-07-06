@@ -232,7 +232,7 @@ st.progress(fortschritt)
     
 # 🧼 Zurücksetzen & Zufällig befüllen
 spalten = st.columns(2)
-if st.session_state.get("farben_bestätigt") and not st.session_state.get("rätsel_gelöst"):
+if st.session_state.get("farben_bestätigt"):
     if spalten[0].button("🧽 Kunstwerk zurücksetzen"):
         st.session_state.kreis_farben = ["white"] * anzahl_kreise
         st.session_state.aktueller_idx = 0
