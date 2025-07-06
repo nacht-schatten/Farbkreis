@@ -294,14 +294,14 @@ if alle_bemalt:
         if gültig:
             dauer = int(time.time() - st.session_state.startzeit)
             m, s = divmod(dauer, 60)
-            st.success(f"🎉 Alle {tupel_länge}er-Farbkombinationen sind eindeutig! Rätsel gelöst in {m:02d}:{s:02d} Minuten! 🎯")
+            st.success(f"🎉 Alle {tupel_länge}er-Farbkombinationen sind einzigartig! Rätsel gelöst in {m:02d}:{s:02d} Minuten! 🎯")
             st.session_state.rätsel_gelöst = True 
             st.balloons()
            
 
         
         if not gültig:
-            fehlermeldung = "⚠️ Folgende Kombinationen treten mehrfach auf:\n\n" + tripel_zu_emojis(fehler)
+            fehlermeldung = f"⚠️ Folgende {tupel_länge}er-Farbkombinationen treten mehrfach auf:\n\n" + tripel_zu_emojis(fehler)
             st.error(fehlermeldung)
 
 else:
