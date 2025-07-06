@@ -249,6 +249,13 @@ if st.session_state.get("farben_bestätigt") and not st.session_state.get("räts
 
       # ----------------------------------------------------         
 
+def reset_app():
+    keys = list(st.session_state.keys())
+    for k in keys:
+        st.session_state.pop(k)
+    st.rerun()
+
+
 # 🧪 Prüfung der n-er-Tripel
 
 
@@ -292,16 +299,7 @@ if alle_bemalt:
             st.session_state.rätsel_gelöst = True 
             st.balloons()
             if st.button ("🔁 Nochmal spielen"):
-                # Spielstand löschen
-                st.session_state.pop("farben_bestätigt", None)
-                st.session_state.pop("rätsel_gelöst", None)
-                st.session_state.pop("kreis_farben", None)
-                st.session_state.pop("aktueller_idx", None)
-                st.session_state.pop("ausgewählte_farben", None)
-                st.session_state.pop("benutzer_farben", None)
-                st.session_state.pop("letzte_farbauswahl", None)
-                st.session_state.pop("level_gestartet", None)
-                st.session_state.pop("level_bestätigt", None)
+                reset_app()
 
         
         if not gültig:
