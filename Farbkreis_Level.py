@@ -293,14 +293,7 @@ if alle_bemalt:
             st.success(f"🎉 Alle 3er-Farbkombinationen sind eindeutig! Rätsel gelöst in {m:02d}:{s:02d} Minuten! 🎯")
             st.session_state.rätsel_gelöst = True 
             st.balloons()
-            if st.button("Nochmal spielen"):
-                st.session_state.level_gestartet = False
-                st.session_state.level_bestätigt = False
-                st.session_state.kreis_farben = ["white"] * anzahl_kreise
-                st.session_state.aktueller_idx = 0
-                st.session_state.farben_bestätigt = False
-                st.session_state.startzeit = time.time()
-                st.rerun()
+           
 
         
         if not gültig:
