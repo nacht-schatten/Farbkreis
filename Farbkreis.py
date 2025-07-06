@@ -13,7 +13,7 @@ st.set_page_config(
 
 
 
-st.title("Farbkreis-Rätsel")
+st.title("Farbkreis-Rätsel klassik")
 
 
 
