@@ -144,7 +144,7 @@ if st.session_state.get("level_gestartet"):
         st.markdown("🎨 Farben festgelegt: **" + " ".join(st.session_state.ausgewählte_farben) + "**")
 
 else:
-    st.info("Wenn du ein Level gewählt hast, kannst du dir Farben aussuchen!")
+    st.info("Sobald du ein Level gestartet hast, kannst du dir Farben aussuchen!")
 
 
 
