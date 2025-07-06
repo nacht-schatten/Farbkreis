@@ -237,7 +237,7 @@ if st.session_state.get("farben_bestätigt"):
         st.session_state.kreis_farben = ["white"] * anzahl_kreise
         st.session_state.aktueller_idx = 0
         st.session_state.startzeit = time.time()
-        st.experimental_rerun()
+        st.rerun()
 
     if spalten[1].button("🎲 Zufällig befüllen"):
         st.session_state.kreis_farben = [np.random.choice(list(farben.values())) for _ in range(anzahl_kreise)]
