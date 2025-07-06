@@ -301,7 +301,7 @@ if alle_bemalt:
 
         
         if not gültig:
-            fehlermeldung = "⚠️ The following combinations are not unique: \n\n" + tripel_zu_emojis(fehler)
+            fehlermeldung = f"⚠️ The following sets of {tupel_länge} are not unique: \n\n" + tripel_zu_emojis(fehler)
             st.error(fehlermeldung)
 
 else:
