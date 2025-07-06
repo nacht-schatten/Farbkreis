@@ -67,7 +67,7 @@ anzahl_farben = st.session_state.get("anzahl_farben")
 tupel_länge = st.session_state.get("tupel_länge")
 anzahl_kreise = st.session_state.get("anzahl_kreise")
 
-st.warning("##### 🔥 Deine Mission:\n\n" + f"\nBemale den Ring mit **{anzahl_kreise} Feldern** so, dass jede mögliche **{tupel_länge}-er**-Kombination mit **{anzahl_farben} Farben** nur einmal im Uhrzeigersinn erscheint.")
+st.info("##### 🔥 Deine Mission:\n\n" + f"\nBemale den Ring mit **{anzahl_kreise} Feldern** so, dass jede mögliche **{tupel_länge}-er**-Kombination mit **{anzahl_farben} Farben** nur einmal im Uhrzeigersinn erscheint.")
 
 
 if "kreis_farben" not in st.session_state or len(st.session_state.kreis_farben) != anzahl_kreise:
