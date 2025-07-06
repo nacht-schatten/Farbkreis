@@ -20,7 +20,7 @@ st.title("🎨 Colourwheel Challenge")
 
 
 if not st.session_state.get("level_bestätigt"):
-    st.markdown("### 🧩 Choose Your level:")
+    st.markdown("### 🧩 Pick Your Mission:")
 
     level_optionen = {
         "🪄 Easy (2 Colours, Sets of 3)": (2, 3),
@@ -34,7 +34,7 @@ if not st.session_state.get("level_bestätigt"):
     }
 
     ausgewähltes_level = st.selectbox(
-        "Choose Level:",
+        "Pick Mission:",
         list(level_optionen.keys()),
         index=4
     )
@@ -69,7 +69,7 @@ anzahl_farben = st.session_state.get("anzahl_farben")
 tupel_länge = st.session_state.get("tupel_länge")
 anzahl_kreise = st.session_state.get("anzahl_kreise")
 
-st.info("##### 🔥 Your Mission:\n\n" + f"\n Organise **{anzahl_farben} colours** in this ring of **{anzahl_kreise} circles** in such a way that each **set of {tupel_länge}** has a unique colour combination. (Think clockwiese!)")
+st.info("##### 🔥 Your Mission:\n\n" + f"\n Organise **{anzahl_farben} colours** in this ring of **{anzahl_kreise} circles** in such a way that each **set of {tupel_länge}** has a unique colour combination. (Think clockwise!)")
 
 
 if "kreis_farben" not in st.session_state or len(st.session_state.kreis_farben) != anzahl_kreise:
@@ -146,7 +146,7 @@ if st.session_state.get("level_gestartet"):
         st.markdown("🎨 Selected Colours: **" + " ".join(st.session_state.ausgewählte_farben) + "**")
 
 else:
-    st.info("Pick & launch a level in order to select your favourite colours!")
+    st.info("Pick & launch your mission in order to select your favourite colours!")
 
 
 
