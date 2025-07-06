@@ -24,13 +24,13 @@ if not st.session_state.get("level_bestätigt"):
 
     level_optionen = {
         "🔰 Einfach (2 Farben, 3er-Tupel)": (2, 3),
-        "🦚 Farbpärchen (3 Farben, 2er-Tupel)": (3, 2),
-        "🔍 Detektivarbeit (4 Farben, 2er-Tupel)": (4, 2),
-        "🌈 Regenbeogen (5 Farben, 2er-Tupel)": (5, 2),
+        "💘 Farbpärchen (3 Farben, 2er-Tupel)": (3, 2),
+        "🔍 Detektiv (4 Farben, 2er-Tupel)": (4, 2),
+        "🌈 Pride (5 Farben, 2er-Tupel)": (5, 2),
         "🎨 Klassik (3 Farben, 3er-Tupel)": (3, 3),
-        "🧠 Logik (2 Farben, 5er-Tupel)": (2, 5),
-        "🧪 Herausfordernd (2 Farben, 6er-Tupel)": (2, 6),
-        "👑 Boss-Level (4 Farben, 3er-Tupel)": (4, 3),
+        "🧠 Genie (2 Farben, 5er-Tupel)": (2, 5),
+        "🧪 Boss (2 Farben, 6er-Tupel)": (2, 6),
+        "👑 Endgame (4 Farben, 3er-Tupel)": (4, 3),
     }
 
     ausgewähltes_level = st.selectbox(
