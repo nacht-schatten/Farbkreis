@@ -98,7 +98,7 @@ st.session_state.setdefault("startzeit", time.time())
 
 
 st.subheader("🔥 Deine Mission:")
-st.info("Gestalte diesen Ring aus 27 Kreisen mit **nur drei Farben**, sodass **jede Kombination von drei aufeinanderfolgenden Farben im Uhrzeigersinn nur einmal erscheint.**")
+st.info("Gestalte diesen Ring aus 27 Kreisen mit **nur drei Farben**, sodass **jede Farbfolge von drei aufeinanderfolgenden Kreisen im Uhrzeigersinn nur einmal erscheint.**")
 
 
 # Farbkreis anzeigen
