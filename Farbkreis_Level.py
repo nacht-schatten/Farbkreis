@@ -28,6 +28,7 @@ if not st.session_state.get("level_bestätigt"):
         "🔍 Detektiv (4 Farben, 2er-Tupel)": (4, 2),
         "🌈 Pride (5 Farben, 2er-Tupel)": (5, 2),
         "🎨 Klassik (3 Farben, 3er-Tupel)": (3, 3),
+        "🧮 Quartett (2 Farben, 4er-Tupel)": (2, 4),
         "🧠 Genie (2 Farben, 5er-Tupel)": (2, 5),
         "🗿 Boss (2 Farben, 6er-Tupel)": (2, 6),
         "👑 Endgame (4 Farben, 3er-Tupel)": (4, 3),
