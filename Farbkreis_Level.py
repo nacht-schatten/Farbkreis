@@ -33,6 +33,7 @@ if not st.session_state.get("level_bestätigt"):
         "🗿 Boss (2 Farben, 6er-Tupel)": (2, 6),
         "👑 Endgame (4 Farben, 3er-Tupel)": (4, 3),
         "🫶 für Lisa (3 Farben, 4er-Tupel)": (3, 4),
+        "🐦‍🔥 Magic (5 Farben, 3er-Tupel)": (5, 3),
     }
 
     ausgewähltes_level = st.selectbox(
