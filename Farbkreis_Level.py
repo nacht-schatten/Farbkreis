@@ -41,7 +41,7 @@ if not st.session_state.get("level_bestätigt"):
     ausgewähltes_level = st.selectbox(
         "Mission wählen",
         list(level_optionen.keys()),
-        index=4
+        index=5
     )
     
 
